@@ -1,0 +1,10 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/00_compile.t
+t/01_pod.t
+t/02_handler.t
+lib/Catalyst/Plugin/Charsets/Japanese.pm
+lib/Catalyst/Plugin/Charsets/Japanese/Nihongo.pod
+META.yml                                 Module meta-data (added by MakeMaker)
