@@ -8,7 +8,7 @@ use NEXT;
 __PACKAGE__->mk_classdata('charsets');
 __PACKAGE__->charsets( Catalyst::Plugin::Charsets::Japanese::Handler->new );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub finalize {
 	my $c = shift;
