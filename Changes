@@ -1,9 +1,12 @@
 Revision history for Perl extension Catalyst::Plugin::Charsets::Japanese.
 
+0.03  Thu Sep 29 02:00:00 2005
+    - little bit fixed documentation
+
 0.02  Wed Jun 29 22:00:00 2005
-	- fixed Nihongo.pod
+    - fixed Nihongo.pod
 
 0.01  Tue Jun 28 18:55:12 2005
-	- original version; created by h2xs 1.23 with options
-		-X -A Catalyst::Plugin::Charsets::Japanese
+    - original version; created by h2xs 1.23 with options
+        -X -A Catalyst::Plugin::Charsets::Japanese
 
