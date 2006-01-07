@@ -8,7 +8,7 @@ use NEXT;
 __PACKAGE__->mk_classdata('charsets');
 __PACKAGE__->charsets( Catalyst::Plugin::Charsets::Japanese::Handler->new );
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub finalize {
     my $c = shift;
@@ -49,7 +49,7 @@ sub prepare_parameters {
     my $out = $c->charsets->out->abbreviation;
 
     for my $value ( values %{ $c->request->{parameters} } ) {
-        if( ref $value && $value ne 'ARRAY' ) {
+        if( ref $value && ref $value ne 'ARRAY' ) {
             next;
         }
         for ( ref($value) ? @{$value} : $value ) {
