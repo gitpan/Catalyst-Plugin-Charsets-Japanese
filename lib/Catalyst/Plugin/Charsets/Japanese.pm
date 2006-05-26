@@ -8,11 +8,11 @@ use NEXT;
 __PACKAGE__->mk_classdata('charsets');
 __PACKAGE__->charsets( Catalyst::Plugin::Charsets::Japanese::Handler->new );
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub finalize {
     my $c = shift;
-    unless ( $c->response->body ) {
+    unless ( $c->response->body and not ref $c->response->body ) {
         return $c->NEXT::finalize;
     }
 

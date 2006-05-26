@@ -1,5 +1,9 @@
 Revision history for Perl extension Catalyst::Plugin::Charsets::Japanese.
 
+0.05  Thu May 7 11:20:00
+    - bugfix: didn't work well with Static::Simple.
+      thanks to Athushi Kato
+
 0.04  Sat Jan 7 17:30:00
     - bugfix: didn't work as expected on checking arreyref in prepare_parameters.
       thanks to makamaka
