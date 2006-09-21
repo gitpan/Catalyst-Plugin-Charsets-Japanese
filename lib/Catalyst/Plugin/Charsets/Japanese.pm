@@ -8,14 +8,13 @@ use NEXT;
 __PACKAGE__->mk_classdata('charsets');
 __PACKAGE__->charsets( Catalyst::Plugin::Charsets::Japanese::Handler->new );
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 sub finalize {
     my $c = shift;
     unless ( $c->response->body and not ref $c->response->body ) {
         return $c->NEXT::finalize;
     }
-
     unless ( $c->response->content_type =~ /^text|xml$|javascript$/ ) {
         return $c->NEXT::finalize;
     }
@@ -113,9 +112,9 @@ use base qw/Class::Accessor::Fast/;
 __PACKAGE__->mk_accessors(qw/name abbreviation method/);
 
 my @TYPES = (
-    [qw/UTF-8     utf8     utf8/],
-    [qw/EUC-JP    euc      euc/ ],
-    [qw/Shift_JIS shiftjis sjis/],
+    [qw/UTF-8     utf8/],
+    [qw/EUC-JP    euc/ ],
+    [qw/Shift_JIS sjis/],
 );
 
 sub new {
@@ -133,7 +132,7 @@ sub _init {
             if( lc($code) eq lc($_) ) {
                 $self->name($type->[0]);
                 $self->abbreviation($type->[1]);
-                $self->method($type->[2]);
+                $self->method($type->[1]);
                 return;
             }
         }
@@ -165,7 +164,7 @@ Catalyst::Plugin::Charsets::Japanese - Japanese specific charsets handler
 
     MyApp->config->{charsets} = {
         in  => 'EUC-JP',
-        out => 'Shift-JIS',
+        out => 'Shift_JIS',
     };
 
 =head1 DESCRIPTION

@@ -76,7 +76,7 @@ charsetsアクセサで呼び出せるオブジェクトには、さらに in �
 
         my $inner_charset = $c->charsets->in->name;
 
-        # 内部処理用の文字コード省略名( utf8, euc, shiftjis )
+        # 内部処理用の文字コード省略名( utf8, euc, sjis )
 
         my $inner_abbrev = $c->charsets->in->abbreviation;
 

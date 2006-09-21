@@ -26,7 +26,7 @@ ok( $handler->set_inner("Shift_JIS") );
 ok( $inner = $handler->in );
 isa_ok( $inner, "Catalyst::Plugin::Charsets::Japanese::Charset" );
 is( $inner->name, "Shift_JIS");
-is( $inner->abbreviation, "shiftjis");
+is( $inner->abbreviation, "sjis");
 is( $inner->method, "sjis");
 
 ok( $handler->set_inner("utf-8") );
@@ -47,7 +47,7 @@ ok( $handler->set_inner("shift_jis") );
 ok( $inner = $handler->in );
 isa_ok( $inner, "Catalyst::Plugin::Charsets::Japanese::Charset" );
 is( $inner->name, "Shift_JIS");
-is( $inner->abbreviation, "shiftjis");
+is( $inner->abbreviation, "sjis");
 is( $inner->method, "sjis");
 
 ok( $handler->set_inner("utf8") );
@@ -64,18 +64,18 @@ is( $inner->name, "EUC-JP");
 is( $inner->abbreviation, "euc");
 is( $inner->method, "euc");
 
-ok( $handler->set_inner("shiftjis") );
+ok( $handler->set_inner("sjis") );
 ok( $inner = $handler->in );
 isa_ok( $inner, "Catalyst::Plugin::Charsets::Japanese::Charset" );
 is( $inner->name, "Shift_JIS");
-is( $inner->abbreviation, "shiftjis");
+is( $inner->abbreviation, "sjis");
 is( $inner->method, "sjis");
 
 ok( $handler->set_inner("sjis") );
 ok( $inner = $handler->in );
 isa_ok( $inner, "Catalyst::Plugin::Charsets::Japanese::Charset" );
 is( $inner->name, "Shift_JIS");
-is( $inner->abbreviation, "shiftjis");
+is( $inner->abbreviation, "sjis");
 is( $inner->method, "sjis");
 
 my $outer = undef;
@@ -98,7 +98,7 @@ ok( $handler->set_outer("Shift_JIS") );
 ok( $outer = $handler->out );
 isa_ok( $outer, "Catalyst::Plugin::Charsets::Japanese::Charset" );
 is( $outer->name, "Shift_JIS");
-is( $outer->abbreviation, "shiftjis");
+is( $outer->abbreviation, "sjis");
 is( $outer->method, "sjis");
 
 ok( $handler->set_outer("utf-8") );
@@ -119,7 +119,7 @@ ok( $handler->set_outer("shift_jis") );
 ok( $outer = $handler->out );
 isa_ok( $outer, "Catalyst::Plugin::Charsets::Japanese::Charset" );
 is( $outer->name, "Shift_JIS");
-is( $outer->abbreviation, "shiftjis");
+is( $outer->abbreviation, "sjis");
 is( $outer->method, "sjis");
 
 ok( $handler->set_outer("utf8") );
@@ -136,17 +136,17 @@ is( $outer->name, "EUC-JP");
 is( $outer->abbreviation, "euc");
 is( $outer->method, "euc");
 
-ok( $handler->set_outer("shiftjis") );
+ok( $handler->set_outer("sjis") );
 ok( $outer = $handler->out );
 isa_ok( $outer, "Catalyst::Plugin::Charsets::Japanese::Charset" );
 is( $outer->name, "Shift_JIS");
-is( $outer->abbreviation, "shiftjis");
+is( $outer->abbreviation, "sjis");
 is( $outer->method, "sjis");
 
 ok( $handler->set_outer("sjis") );
 ok( $outer = $handler->out );
 isa_ok( $outer, "Catalyst::Plugin::Charsets::Japanese::Charset" );
 is( $outer->name, "Shift_JIS");
-is( $outer->abbreviation, "shiftjis");
+is( $outer->abbreviation, "sjis");
 is( $outer->method, "sjis");
 
